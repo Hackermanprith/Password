@@ -21,13 +21,5 @@ if __name__ == "__main__":
     # print(s)
     print("Your password is:")
     print("".join(s[0:plen]))
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\Prithwish Mukherjee\Documents\Paswworddb.accdb;')
-cursor = conn.cursor()
-name = input('Name:\t')
-pas = input('Password:\t')
-app = input('App/Website for which app is generated:\t')
-cursor.execute("INSERT INTO password_table (Name, Password,App) VALUES(?,?,?);",name, pas,app)
-conn.commit()
-   
 
     
